@@ -63,7 +63,7 @@ int main(){
 
 /* Sample input :
 
-5 7    //Total Nodes and Total Vertex
+5 7    //Total Nodes and Total Edges
 0 3 5  //Node1 Node2 Weight
 0 1 2
 1 3 5
