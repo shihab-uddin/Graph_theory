@@ -45,7 +45,7 @@ void dijkstra(int source){
         for(int i = 0; i < adjList[u].size(); i++){
             PAIR v = adjList[u][i]; /*Here second element = distance of u to i && First element = node2*/
             if(dist[u] + v.second < dist[v.first]){/*Relaxation condition :
-                                                    distance of u + distance of u to v < distance of V then update */
+                                                    distance of u + distance of u to v < distance of v then update */
                 dist[v.first] = dist[u] + v.second;
                 parent[v.first] = u; /*Update the parent*/
                 pq.push(make_pair(-dist[v.first], -v.first));/*Push that lowest Distance and Vertex into PQ*/
