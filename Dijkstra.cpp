@@ -85,6 +85,7 @@ int main(){
 /**
 ----> Algorithm : Dijkstra
 ----> TIME COMPLEXITY : O(V + ElogV)
+----> NB : Dijkstra can't work with Negative weight Edge and Cycle both.
 */
 
 /*Input :
