@@ -53,7 +53,8 @@ int main(){
 
     ifstream input("input_dijkstra.txt");
     if(!input.is_open()){
-        cout<<"File not found"<<endl;
+        cout<<"Input File not found"<<endl;
+	return 0;
     }else{
         input>>totalNode;
         while(input>>node1>>node2>>weight){
