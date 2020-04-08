@@ -100,9 +100,7 @@ int main(){
 2 3 7
 3 4 5
 
-*/
-
-/*Output :
+Output :
 
 Enter Source node : 2
 Enter destination : 3
