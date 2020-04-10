@@ -55,13 +55,16 @@ int main(){
         parent[i] = i;
     }
 
+    cout<<"Displaying the Nodes with Weight which are selected for Minimum Spanning Tree : "<<endl;
     kruskal();
 
     return 0;
 }
 
 
-/* Sample input :
+/*
+
+Input :
 
 5 7    //Total Nodes and Total Edges
 0 3 5  //Node1 Node2 Weight
@@ -71,5 +74,14 @@ int main(){
 1 4 4
 2 4 34
 3 4 58
+
+Output :
+
+Displaying the Nodes with Weight which are selected for Minimum Spanning Tree :
+0 1 2
+1 4 4
+0 3 5
+1 2 14
+Total Cost for MST : 25
 
 */
