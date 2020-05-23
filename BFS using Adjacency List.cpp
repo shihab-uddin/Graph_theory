@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-vector <int> adjList[1000];
+vector <int> adjList[1000]; // A 2d Vector for storing all the Vertices as Adjacency List
 queue <int> q;
 bool visited[100];
 
