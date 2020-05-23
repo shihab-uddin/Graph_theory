@@ -6,12 +6,12 @@ queue <int> q;
 bool visited[100];
 
 void BFS(int src){
-    q.push(src);
-    visited[src] = true;
-    while(!q.empty()){
+    q.push(src); // Firstly we have to push Source in a Queue
+    visited[src] = true; // We have already visited the Source. So it's true.
+    while(!q.empty()){ // While Queue is not Empty taking Front item of Queue and Traversing it's Adjacent it they are not visited.
         int u = q.front();
         cout<<u<<" ";
-        q.pop();
+        q.pop(); // Remove the front item of Queue Since it is already visited.
         for(int i = 0; i < adjList[u].size(); i++){ // Traverse all the adjacent of the vertex
             int x = adjList[u][i];
             if(visited[x] == false){ // if adjacent of a vertex isn't visited then push into queue and visit that.
@@ -31,7 +31,7 @@ int main(){
 
     cin>>totalEdges;
 
-    for(int i = 0;  i < totalEdges; i++){
+    for(int i = 0;  i < totalEdges; i++){ // Taking all the edges one by one and storing those in an Adjacency List.
         cin>>u>>v;
         adjList[u].push_back(v);
         adjList[v].push_back(u);
@@ -39,7 +39,7 @@ int main(){
 
     cout<<"Enter Source : "<<endl;
     cin>>src;
-    BFS(src);
+    BFS(src); // Calling BFS From Source.
 
 
     return 0;
