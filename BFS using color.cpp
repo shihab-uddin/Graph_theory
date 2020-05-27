@@ -21,16 +21,16 @@ void BFS(int src){
         parent[i] = -1;
     }
 
-    color[src] = GRAY;
+    color[src] = GRAY; // The node which is in process, the color that node is Gray
     dist[src] = 0;  // Distance of Source = 0
-    parent[src] = -1;
+    parent[src] = -1; // Since Source has no parent, So just keeping -1
     q.push(src);
 
     while(!q.empty()){
         int x;
-        x = q.front();
+        x = q.front(); // Keeping the Front item of queue in a variable
         q.pop();
-        color[x] = GRAY;
+        color[x] = GRAY; // The node which is in process, the color that node is Gray
         cout<<x<<" ";
         for(int i = 1; i <= totalNodes; i++){ // Traversing all the adjacent of a vertex
             if(adj[x][i] == 1){
@@ -42,7 +42,7 @@ void BFS(int src){
                 }
             }
         }
-        color[x] = BLACK;
+        color[x] = BLACK; // If all the child of that node is Visited(Gray) then Make it Black.
     }
 }
 
